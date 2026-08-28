@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        KrishiMitra.AI | Smart Farming
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+
+            🌾
+
+            <div>
+
+                <strong>
+                    KrishiMitra<span>.AI</span>
+                </strong>
+
+                <small>
+                    Smart Farming Assistant
+                </small>
+
+            </div>
+
+        </div>
+
+        <button id="languageBtn" class="outline">
+            हिन्दी / English
+        </button>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div>
+
+                <p class="eyebrow">
+                    AI • AGRICULTURE • TECHNOLOGY
+                </p>
+
+                <h1>
+                    Your Intelligent
+                    <span>Farming Companion</span>
+                </h1>
+
+                <p class="hero-text">
+
+                    KrishiMitra.AI helps farmers make
+                    smarter decisions using AI,
+                    crop information, weather,
+                    soil and market insights.
+
+                </p>
+
+                <a href="#assistant" class="button">
+                    Ask KrishiMitra →
+                </a>
+
+            </div>
+
+
+            <div class="hero-icon">
+
+                🌱
+
+                <small>
+                    Grow Smarter<br>
+                    Farm Better
+                </small>
+
+            </div>
+
+        </section>
+
+
+        <!-- FARMER PROFILE -->
+
+        <section class="card">
+
+            <h2>
+                👨‍🌾 Farmer Profile
+            </h2>
+
+            <div class="form-grid">
+
+                <input id="name" type="text" placeholder="Farmer Name *">
+
+                <input id="village" type="text" placeholder="Village / Location">
+
+                <input id="crop" type="text" placeholder="Main Crop">
+
+                <select id="soil">
+
+                    <option value="">
+                        Select Soil Type
+                    </option>
+
+                    <option>
+                        Alluvial
+                    </option>
+
+                    <option>
+                        Black Soil
+                    </option>
+
+                    <option>
+                        Red Soil
+                    </option>
+
+                    <option>
+                        Sandy Soil
+                    </option>
+
+                    <option>
+                        Clay Soil
+                    </option>
+
+                    <option>
+                        Loamy Soil
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button id="saveProfile" class="button">
+                Save Farmer Profile
+            </button>
+
+            <span id="profileStatus"></span>
+
+        </section>
+
+
+        <!-- WEATHER -->
+
+        <section class="weather-grid">
+
+            <div class="weather-card">
+
+                🌡️
+
+                <strong>
+                    <span id="temperature">
+                        --
+                    </span>°C
+                </strong>
+
+                <small>
+                    Temperature
+                </small>
+
+            </div>
+
+
+            <div class="weather-card">
+
+                💧
+
+                <strong>
+                    <span id="humidity">
+                        --
+                    </span>%
+                </strong>
+
+                <small>
+                    Humidity
+                </small>
+
+            </div>
+
+
+            <div class="weather-card">
+
+                🌧️
+
+                <strong>
+                    <span id="rain">
+                        --
+                    </span>%
+                </strong>
+
+                <small>
+                    Rain Chance
+                </small>
+
+            </div>
+
+
+            <div class="weather-card">
+
+                💨
+
+                <strong>
+                    <span id="wind">
+                        --
+                    </span>
+                    km/h
+                </strong>
+
+                <small>
+                    Wind Speed
+                </small>
+
+            </div>
+
+        </section>
+
+
+        <!-- AI ASSISTANT -->
+
+        <section id="assistant" class="card">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        AI FARMING ASSISTANT
+                    </p>
+
+                    <h2>
+                        Ask KrishiMitra.AI
+                    </h2>
+
+                </div>
+
+                <span class="online">
+                    ● Online
+                </span>
+
+            </div>
+
+
+            <!-- CHAT -->
+
+            <div id="chat" class="chat">
+
+                <div class="message bot">
+
+                    👋 Namaste!
+
+                    <br><br>
+
+                    Tell me about your crop
+                    or farming problem.
+
+                    <br><br>
+
+                    Example:
+
+                    <b>
+                        My wheat leaves are turning
+                        yellow. What should I do?
+                    </b>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUICK QUESTIONS -->
+
+            <div class="quick-buttons">
+
+                <button>
+                    How often should I irrigate?
+                </button>
+
+                <button>
+                    Why are my leaves yellow?
+                </button>
+
+                <button>
+                    Which fertilizer should I use?
+                </button>
+
+                <button>
+                    How can I control pests?
+                </button>
+
+            </div>
+
+
+            <!-- INPUT -->
+
+            <div class="ask-box">
+
+                <input id="question" type="text" placeholder="Ask your farming question...">
+
+                <button id="askButton" class="button">
+                    Send
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- MARKET + ALERTS -->
+
+        <section class="two-columns">
+
+
+            <!-- MARKET -->
+
+            <div class="card">
+
+                <div class="section-heading">
+
+                    <h2>
+                        💰 Market Insights
+                    </h2>
+
+                    <button id="refreshMarket" class="outline">
+                        Refresh
+                    </button>
+
+                </div>
+
+
+                <div id="market">
+
+                    Loading...
+
+                </div>
+
+            </div>
+
+
+            <!-- ALERTS -->
+
+            <div class="card">
+
+                <h2>
+                    🌦️ Farming Alerts
+                </h2>
+
+
+                <div class="alert">
+
+                    💧
+
+                    <strong>
+                        Irrigation:
+                    </strong>
+
+                    Check soil moisture
+                    before watering.
+
+                </div>
+
+
+                <div class="alert">
+
+                    🦠
+
+                    <strong>
+                        Crop Health:
+                    </strong>
+
+                    Inspect leaves regularly
+                    for pests and disease.
+
+                </div>
+
+
+                <div class="alert">
+
+                    🌧️
+
+                    <strong>
+                        Weather:
+                    </strong>
+
+                    Avoid spraying before
+                    heavy rainfall.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FEATURES -->
+
+        <section class="features">
+
+            <div class="feature">
+
+                <span>
+                    🌱
+                </span>
+
+                <h3>
+                    Crop Recommendation
+                </h3>
+
+                <p>
+                    Get crop suggestions
+                    based on soil and conditions.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <span>
+                    🦠
+                </span>
+
+                <h3>
+                    Disease Detection
+                </h3>
+
+                <p>
+                    Analyze crop health and
+                    identify possible diseases.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <span>
+                    💧
+                </span>
+
+                <h3>
+                    Smart Irrigation
+                </h3>
+
+                <p>
+                    Get irrigation guidance
+                    based on crop requirements.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <span>
+                    🗣️
+                </span>
+
+                <h3>
+                    Local Languages
+                </h3>
+
+                <p>
+                    Make agricultural knowledge
+                    accessible to more farmers.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        © 2026 KrishiMitra.AI
+
+        <br>
+
+        Intelligent Technology for
+        Smarter Farming
+
+    </footer>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
